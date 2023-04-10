@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { CarApiService } from 'src/app/services/car-api.service';
 import {ICar, NewCar } from 'src/app/interfaces/car';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-carlist',
@@ -9,8 +10,10 @@ import {ICar, NewCar } from 'src/app/interfaces/car';
   styleUrls: ['./carlist.component.css']
 })
 export class CarlistComponent implements OnInit {
-  carData!: ICar[]; 
-  show: boolean | undefined;
+  carData!: ICar | any; 
+  show !: boolean ;
+
+  constructor(private _carAPIService: CarApiService) { }
 
   ngOnInit() {
     this.getCars()
@@ -33,5 +36,5 @@ export class CarlistComponent implements OnInit {
   }
 
 
-  constructor(private _carAPIService: CarApiService) { }
+
 }

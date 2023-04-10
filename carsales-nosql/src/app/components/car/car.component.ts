@@ -13,6 +13,8 @@ export class CarComponent {
   carData!: ICar;
 carImageWidth: number = 300;
 
+constructor(private _carAPIService: CarApiService) { }
+
 deleteCar(carId:string) { 
   this._carAPIService.delCarDetails(carId).subscribe(result =>
     { 
@@ -20,5 +22,5 @@ deleteCar(carId:string) {
     });
 }
 
-constructor(private _carAPIService: CarApiService) { }
+
 }
