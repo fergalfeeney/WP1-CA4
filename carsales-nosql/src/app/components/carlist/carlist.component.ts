@@ -31,10 +31,12 @@ export class CarlistComponent implements OnInit {
     this._carAPIService.addCarDetails(addCar).subscribe(carData =>
       { this.carData = carData}
     );
-
+this.getCars()
     return false;
   }
-
+refreshCars(){
+  this.getCars();
+}
 
 
 }
