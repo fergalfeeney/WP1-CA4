@@ -1,0 +1,7 @@
+I'm not sure why my code didn't work as I followed all instructions.
+
+Firebase Link: https://wp1-ca4-84d30.web.app/
+
+Don't know why firebase doesn't work. Didn't work in last CA either.
+
+Set up an EC2 but couldn't figure out how to do that part.
